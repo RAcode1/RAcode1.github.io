@@ -23,10 +23,10 @@
     <p class="lead">I build AI apps with Claude Code and the Claude API, and I make sure they work before anyone relies on them.</p>
     <p class="note">Ten years of making software reliable across telecom, healthcare, and commerce. Every demo below plays back real output saved from my apps: nothing to install, no sign-in.</p>
     <nav class="jump" aria-label="Projects">
-      <a href="#digest" class="chip chip-amber"><span>1</span>Morning email digest</a>
-      <a href="#helpdesk" class="chip chip-teal"><span>2</span>Family help desk</a>
-      <a href="#mindsprout" class="chip chip-green"><span>3</span>MindSprout story app</a>
-      <a href="#testing" class="chip chip-indigo"><span>4</span>How I evaluate MindSprout</a>
+      <a href="#mindsprout" class="chip chip-green"><span>1</span>MindSprout story app</a>
+      <a href="#testing" class="chip chip-indigo"><span>2</span>How I evaluate MindSprout</a>
+      <a href="#digest" class="chip chip-amber"><span>3</span>Morning email digest</a>
+      <a href="#helpdesk" class="chip chip-teal"><span>4</span>Family help desk</a>
     </nav>
     <p class="links"><a href="https://github.com/RAcode1">GitHub</a><span aria-hidden="true">·</span><a href="https://www.linkedin.com/in/ramyaallam">LinkedIn</a></p>
   </div>
@@ -34,80 +34,11 @@
 
 <main>
 
-<!-- 1. MORNING DIGEST -->
-<section id="digest" class="project theme-amber">
-  <div class="wrap">
-    <div class="project-head">
-      <p class="num">1</p>
-      <div>
-        <h2>Morning email digest</h2>
-        <p class="pitch">Part of Home Help Desk. Every morning Claude triages my inbox like a support queue: what needs me today, who still owes me a reply, and what's noise.</p>
-        <p class="tags"><span>Gmail API + OAuth</span><span>Claude Haiku 5.5</span><span>LLM classification</span><span>Structured outputs</span><span>Prompt-injection defense</span><span>Scheduled automation</span></p>
-      </div>
-      <a class="code-link" href="https://github.com/RAcode1/home-help-desk">View code</a>
-    </div>
-
-    <div class="demo digest-demo">
-      <div class="inbox">
-        <div class="inbox-bar">
-          <span>Inbox <small>(made-up emails)</small></span>
-          <button class="run-btn" id="runDigest" type="button">▶ Run this morning's digest</button>
-        </div>
-        <ul class="mail-list" id="mailList"></ul>
-        <p class="sort-status" id="sortStatus" aria-live="polite"></p>
-      </div>
-      <div class="digest-card" id="digestCard" aria-live="polite">
-        <p class="placeholder">The digest appears here.</p>
-      </div>
-    </div>
-
-    <div class="facts">
-      <div class="fact"><b>On my real inbox</b><span>94 emails in a day: 0 needed me, 13 could wait, 81 were noise. It cost about 1.4 cents.</span></div>
-      <div class="fact"><b>Tested on my own email</b><span>90-95% sorted the way I would, across 3 runs. Every miss leaned toward showing me more, never hiding something.</span></div>
-      <div class="fact"><b>Least access</b><span>It can read mail and add its own summary. It can't send, delete, or unsubscribe on its own.</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- 2. FAMILY HELP DESK -->
-<section id="helpdesk" class="project theme-teal">
-  <div class="wrap">
-    <div class="project-head">
-      <p class="num">2</p>
-      <div>
-        <h2>Family help desk</h2>
-        <p class="pitch">Also part of Home Help Desk. I'm my family's unpaid IT department: their tech questions become tickets, with a scam check and a simple step-by-step reply.</p>
-        <p class="tags"><span>Claude Opus 5.5</span><span>Multi-model routing</span><span>Vision (screenshots)</span><span>AI guardrails in code</span><span>Ticket analytics</span></p>
-      </div>
-      <a class="code-link" href="https://github.com/RAcode1/home-help-desk#family-help-desk">View code</a>
-    </div>
-
-    <div class="demo hd-demo">
-      <div class="phone" aria-live="polite">
-        <div class="phone-top"><span class="avatar" id="chatAvatar">D</span><span class="chat-name" id="chatName">Family</span></div>
-        <div class="chat" id="chat"></div>
-      </div>
-      <div class="board">
-        <p class="step-label">Pick a message from the family</p>
-        <div class="msg-list" id="msgList"></div>
-        <p class="step-label board-title">Ticket board</p>
-        <ul class="tickets" id="tickets"></ul>
-        <p class="repeat" id="repeats"></p>
-        <div class="mini-kpis">
-          <div><b>12 / 12</b><span>scam-safety tests passed</span></div>
-          <div><b>7 of 7</b><span>scams flagged urgent</span></div>
-          <div><b>0</b><span>false alarms on normal questions</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 3. MINDSPROUT -->
+<!-- 1. MINDSPROUT -->
 <section id="mindsprout" class="project theme-green">
   <div class="wrap">
     <div class="project-head">
-      <p class="num">3</p>
+      <p class="num">1</p>
       <div>
         <h2>MindSprout</h2>
         <p class="pitch">A parent picks a lesson. Claude writes a 6-page story that teaches it, at the child's level.</p>
@@ -132,11 +63,11 @@
   </div>
 </section>
 
-<!-- 4. EVALUATION -->
+<!-- 2. EVALUATION -->
 <section id="testing" class="project theme-indigo">
   <div class="wrap">
     <div class="project-head">
-      <p class="num">4</p>
+      <p class="num">2</p>
       <div>
         <h2>How I evaluate MindSprout</h2>
         <p class="pitch">A 70-case golden dataset, a second Claude model as judge, and red-team attempts to break it on purpose.</p>
@@ -185,13 +116,82 @@
   </div>
 </section>
 
+<!-- 3. MORNING DIGEST -->
+<section id="digest" class="project theme-amber">
+  <div class="wrap">
+    <div class="project-head">
+      <p class="num">3</p>
+      <div>
+        <h2>Morning email digest</h2>
+        <p class="pitch">Part of Home Help Desk. Every morning Claude triages my inbox like a support queue: what needs me today, who still owes me a reply, and what's noise.</p>
+        <p class="tags"><span>Gmail API + OAuth</span><span>Claude Haiku 5.5</span><span>LLM classification</span><span>Structured outputs</span><span>Prompt-injection defense</span><span>Scheduled automation</span></p>
+      </div>
+      <a class="code-link" href="https://github.com/RAcode1/home-help-desk">View code</a>
+    </div>
+
+    <div class="demo digest-demo">
+      <div class="inbox">
+        <div class="inbox-bar">
+          <span>Inbox <small>(made-up emails)</small></span>
+          <button class="run-btn" id="runDigest" type="button">▶ Run this morning's digest</button>
+        </div>
+        <ul class="mail-list" id="mailList"></ul>
+        <p class="sort-status" id="sortStatus" aria-live="polite"></p>
+      </div>
+      <div class="digest-card" id="digestCard" aria-live="polite">
+        <p class="placeholder">The digest appears here.</p>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>On my real inbox</b><span>94 emails in a day: 0 needed me, 13 could wait, 81 were noise. It cost about 1.4 cents.</span></div>
+      <div class="fact"><b>Tested on my own email</b><span>90-95% sorted the way I would, across 3 runs. Every miss leaned toward showing me more, never hiding something.</span></div>
+      <div class="fact"><b>Least access</b><span>It can read mail and add its own summary. It can't send, delete, or unsubscribe on its own.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. FAMILY HELP DESK -->
+<section id="helpdesk" class="project theme-teal">
+  <div class="wrap">
+    <div class="project-head">
+      <p class="num">4</p>
+      <div>
+        <h2>Family help desk</h2>
+        <p class="pitch">Also part of Home Help Desk. I'm my family's unpaid IT department: their tech questions become tickets, with a scam check and a simple step-by-step reply.</p>
+        <p class="tags"><span>Claude Opus 5.5</span><span>Multi-model routing</span><span>Vision (screenshots)</span><span>AI guardrails in code</span><span>Ticket analytics</span></p>
+      </div>
+      <a class="code-link" href="https://github.com/RAcode1/home-help-desk#family-help-desk">View code</a>
+    </div>
+
+    <div class="demo hd-demo">
+      <div class="phone" aria-live="polite">
+        <div class="phone-top"><span class="avatar" id="chatAvatar">D</span><span class="chat-name" id="chatName">Family</span></div>
+        <div class="chat" id="chat"></div>
+      </div>
+      <div class="board">
+        <p class="step-label">Pick a message from the family</p>
+        <div class="msg-list" id="msgList"></div>
+        <p class="step-label board-title">Ticket board</p>
+        <ul class="tickets" id="tickets"></ul>
+        <p class="repeat" id="repeats"></p>
+        <div class="mini-kpis">
+          <div><b>12 / 12</b><span>scam-safety tests passed</span></div>
+          <div><b>7 of 7</b><span>scams flagged urgent</span></div>
+          <div><b>0</b><span>false alarms on normal questions</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="wrap">
     <p>Built with Claude Code. The code and full test results are on GitHub:
-      <a href="https://github.com/RAcode1/home-help-desk">Home Help Desk</a> ·
-      <a href="https://github.com/RAcode1/mindsprout-ai">MindSprout</a></p>
+      <a href="https://github.com/RAcode1/mindsprout-ai">MindSprout</a> ·
+      <a href="https://github.com/RAcode1/home-help-desk">Home Help Desk</a></p>
     <p class="small">These demos replay saved runs, so they cost nothing to view. The apps themselves call the Claude API; each repo explains how to run them.</p>
   </div>
 </footer>
