@@ -287,7 +287,7 @@ window.DEMO = {
     "address": "billing@prairiewater.example",
     "subject": "Your November water bill is ready",
     "bucket": "needs_you_today",
-    "summary": "Pay $84.20 water bill or set up autopay.",
+    "summary": "Pay November water bill of $84.20.",
     "due": "Friday, November 21",
     "suspicious": false
    },
@@ -303,12 +303,12 @@ window.DEMO = {
    },
    {
     "id": "e03",
-    "from": "Jordan Lee",
-    "address": "jordan.lee@talentpartners.example",
-    "subject": "Interview times for the QA Engineer role",
+    "from": "Coach Rivera",
+    "address": "coach.rivera@kicksleague.example",
+    "subject": "Can you drive the carpool Thursday?",
     "bucket": "needs_you_today",
-    "summary": "Send two or three interview times for QA Engineer role.",
-    "due": null,
+    "summary": "Reply to Coach Rivera whether you can drive carpool Thursday.",
+    "due": "Wednesday",
     "suspicious": false
    },
    {
@@ -317,7 +317,7 @@ window.DEMO = {
     "address": "deals@brightmart.example",
     "subject": "48-hour flash sale: up to 60% off everything!",
     "bucket": "noise",
-    "summary": "Brightmart flash sale up to 60% off.",
+    "summary": "Brightmart flash sale: up to 60% off.",
     "due": null,
     "suspicious": false
    },
@@ -337,7 +337,7 @@ window.DEMO = {
     "address": "hello@dealdaily.example",
     "subject": "Today's top 10 deals",
     "bucket": "noise",
-    "summary": "Deal Daily roundup of today's deals.",
+    "summary": "Deal Daily roundup of top deals.",
     "due": null,
     "suspicious": false
    },
@@ -347,7 +347,7 @@ window.DEMO = {
     "address": "pta@maple-elem.example",
     "subject": "PTA newsletter: November",
     "bucket": "can_wait",
-    "summary": "Maple Elementary PTA November newsletter with upcoming dates.",
+    "summary": "Maple Elementary PTA November newsletter with upcoming events.",
     "due": null,
     "suspicious": false
    },
@@ -357,7 +357,7 @@ window.DEMO = {
     "address": "updates@quickship.example",
     "subject": "Your package has shipped",
     "bucket": "can_wait",
-    "summary": "Package shipped, arriving Monday, November 23.",
+    "summary": "Order shipped, arriving Monday, November 23.",
     "due": "Monday, November 23",
     "suspicious": false
    },
@@ -367,7 +367,7 @@ window.DEMO = {
     "address": "appointments@sunrisedental.example",
     "subject": "Please confirm your appointment on Mon, Nov 24 at 3:30 PM",
     "bucket": "needs_you_today",
-    "summary": "Reply C to confirm dental cleaning on November 24.",
+    "summary": "Reply C to confirm dental cleaning on Monday, November 24.",
     "due": "Monday, November 24 at 3:30 PM",
     "suspicious": false
    },
@@ -377,7 +377,7 @@ window.DEMO = {
     "address": "security@acc0unt-verify.example",
     "subject": "Urgent: your account will be suspended in 24 hours",
     "bucket": "can_wait",
-    "summary": "Warning: urgent password request from a lookalike domain; do not click.",
+    "summary": "Suspicious warning about suspended account; do not click or enter password.",
     "due": null,
     "suspicious": true
    },
@@ -397,7 +397,7 @@ window.DEMO = {
     "address": "notices@cedarlibrary.example",
     "subject": "2 items due in 3 days",
     "bucket": "needs_you_today",
-    "summary": "Renew or return two library books.",
+    "summary": "Renew or return two library books due Sunday.",
     "due": "Sunday, November 22",
     "suspicious": false
    },
@@ -407,18 +407,18 @@ window.DEMO = {
     "address": "dana.w@mail.example",
     "subject": "Dinner on Saturday?",
     "bucket": "needs_you_today",
-    "summary": "Tell Dana if you can come to Saturday dinner.",
+    "summary": "Tell Dana if you can make Saturday dinner at 6.",
     "due": "Thursday",
     "suspicious": false
    },
    {
     "id": "e14",
-    "from": "JobBoard Alerts",
-    "address": "alerts@jobboard.example",
-    "subject": "12 new QA Engineer jobs for you",
+    "from": "Cedar Springs Rec Center",
+    "address": "news@cedarspringsrec.example",
+    "subject": "The winter class catalog is here",
     "bucket": "can_wait",
-    "summary": "Job alerts: 12 new QA Engineer listings matching your search.",
-    "due": null,
+    "summary": "Rec center winter class catalog; registration opens December 1.",
+    "due": "December 1",
     "suspicious": false
    },
    {
@@ -427,7 +427,7 @@ window.DEMO = {
     "address": "billing@streamflix.example",
     "subject": "Your free trial ends in 2 days",
     "bucket": "needs_you_today",
-    "summary": "StreamFlix trial ends; cancel before renewal at $15.49 a month.",
+    "summary": "Free trial ends; cancel by November 21 or plan renews at $15.49.",
     "due": "November 21",
     "suspicious": false
    },
@@ -437,23 +437,23 @@ window.DEMO = {
     "address": "hello@dealdaily.example",
     "subject": "Last chance: these deals end tonight",
     "bucket": "noise",
-    "summary": "Deal Daily says deals end tonight.",
+    "summary": "Deal Daily last-chance sale ending tonight.",
     "due": null,
     "suspicious": false
    }
   ],
   "waiting": [
    {
-    "waiting_on": "the insurance claims team",
+    "waiting_on": "the claims team",
     "days": 9,
     "subject": "Question about claim #48213",
-    "draft": "I wanted to follow up on claim #48213 and my photo submission from November 10. Could you let me know whether anything else is needed from me, and when I might expect an update?"
+    "draft": "I wanted to follow up on claim #48213 and the photos I submitted on November 10. Could you let me know whether anything else is needed from me, and when I might expect an update?"
    },
    {
     "waiting_on": "Rob's Plumbing",
     "days": 4,
     "subject": "Quote for kitchen faucet",
-    "draft": "I wanted to follow up on my earlier note about a quote for replacing our kitchen faucet. Could you send over a quote, and let me know if a weekday visit next week works for you?"
+    "draft": "I wanted to follow up on my earlier note about a quote for replacing our kitchen faucet. Could you send over a quote, and let me know which weekday next week works for a visit?"
    }
   ],
   "noise": [
@@ -479,7 +479,7 @@ window.DEMO = {
     "opened": 0
    }
   ],
-  "cost": "8 Claude calls, 10,792 tokens in, 3,337 out, about $0.071"
+  "cost": "8 Claude calls, 10,776 tokens in, 3,480 out, about $0.073"
  },
  "helpdesk": {
   "tickets": [
@@ -489,8 +489,8 @@ window.DEMO = {
     "category": "wifi_internet",
     "urgency": "normal",
     "scam_risk": "no_signs",
-    "summary": "Dad's internet and TV down since morning, router light blinking red",
-    "reply": "1. Check the box's power cable and the cable from the wall. Push both in firmly.\n2. Turn the box off at the wall switch. Wait 1 minute. Turn it back on.\n3. Wait 5 minutes for the lights to settle. Check if the light is still red.\n4. If it is still red, the problem may be with the internet company. Call them only on the number printed on your bill or their official app.\n5. If anyone asks you for a code, a password, or to install an app, say no and call me first.\n6. Send me a photo of the box's lights so I can help."
+    "summary": "Dad: internet and TV down since morning, router light red",
+    "reply": "1. Find the internet box with the red light. Pull its power plug out of the wall.\n2. Wait 1 minute. Then plug it back in.\n3. Wait 5 minutes. Do not touch anything while the lights come back.\n4. Check that all cables on the box are pushed in firmly, especially the thin cable from the wall.\n5. If the light is still red, the problem may be with the internet company. Send me a photo of the box and the lights, and I will check it with them.\n6. The TV uses the internet too, so it should start working once the internet is back."
    },
    {
     "person": "Mom",
@@ -498,8 +498,8 @@ window.DEMO = {
     "category": "scam_or_suspicious",
     "urgency": "urgent",
     "scam_risk": "likely_scam",
-    "summary": "Mom got SMS threatening electricity cut-off tonight, asks to call",
-    "reply": "This message looks like a scam. Do NOT call the number in the message. Do NOT click any links. Never share any codes, OTPs, PINs, passwords, or bank or card details with anyone. Do not install any app they ask for. Please check with me first before doing anything.\n\n1. Do not call the number in the SMS.\n2. Do not reply to the message.\n3. If you are worried about your bill, look at your last paper bill or the official electricity app. Use only the phone number printed there.\n4. Delete the SMS, or block the number.\n5. If anyone calls you about this, hang up.\n6. Send me a message, and I will check your bill with you."
+    "summary": "Mom got SMS threatening electricity disconnection tonight, asks to call",
+    "reply": "This looks like a scam. Do not call the number in the message. Do not click any links. Do not share any codes, OTPs, PINs, passwords, or bank or card details with anyone. Do not install any app they ask for. Check with me first before doing anything.\n\n1. Do not call the number in the SMS.\n2. Do not reply to the message.\n3. Do not pay anything or install any app if someone calls you.\n4. If you are worried about the bill, look at your last paper bill or the official electricity company app. Call only the number printed there.\n5. Delete the SMS and block the sender.\n6. Call me if they contact you again."
    },
    {
     "person": "Mother-in-law",
@@ -507,8 +507,8 @@ window.DEMO = {
     "category": "phone_or_tablet",
     "urgency": "normal",
     "scam_risk": "no_signs",
-    "summary": "Mother-in-law's phone storage full, WhatsApp photos won't download",
-    "reply": "1. Open WhatsApp. Tap Settings (the gear icon, or the three dots at the top, then Settings). Tap Storage and Data, then Manage Storage.\n2. Look at the big items at the top. Delete old videos and forwarded files you no longer need. Do not delete photos you want to keep.\n3. Clear out the chats you don't need, like big groups that send lots of good-morning videos.\n4. Outside WhatsApp, open your Photos or Gallery app. Delete old videos you don't need. Then empty the 'Recently Deleted' or 'Trash' folder.\n5. Delete any apps you never use.\n6. Go back to my chat and tap the photos again to download them. If it still says storage full, call me and we will fix it together."
+    "summary": "Mother-in-law's phone storage full, can't download WhatsApp photos",
+    "reply": "1. Open WhatsApp. Tap the three dots (Android) or Settings (iPhone). Then tap Settings, then Storage and data, then Manage storage.\n2. Tap 'Larger than 5 MB' or 'Forwarded many times'. These are usually big videos and forwarded clips.\n3. Tick the items you do not need. Tap the bin icon to delete them. Only delete things you are sure you don't want.\n4. Open your Gallery or Photos app. Delete old videos you no longer need. They take the most space.\n5. Turn the phone off and on again.\n6. Open my chat and tap the photos to download them again. If it still says full, message me and I will help."
    },
    {
     "person": "Father-in-law",
@@ -516,8 +516,8 @@ window.DEMO = {
     "category": "payments_and_banking",
     "urgency": "urgent",
     "scam_risk": "likely_scam",
-    "summary": "Caller claiming bank asked father-in-law to read OTP",
-    "reply": "This looks like a scam. Do not read or share the OTP or any code with anyone, even if they sound polite or say they are from the bank. Banks never ask for your OTP. Do not click any links. Do not call any number the caller or a message gives you. Do not share passwords, PINs, or card details. Please check with me first before doing anything.\n\n1. Do not read the OTP to anyone. Ignore it if it arrives.\n2. If he calls again, hang up. You do not need to be polite.\n3. If you already shared a code, call me right away. Then call the number printed on the back of your card to block it.\n4. To check your card, call only the number on the back of your card. Do not use any number the caller gave you.\n5. Do not install any app the caller asks you to install.\n6. Call me so we can check your account together."
+    "summary": "Caller claiming bank asked Father-in-law to read OTP",
+    "reply": "This looks like a scam. Real banks never ask you to read out an OTP, even if the caller is very polite. Do not tell anyone the OTP or any code, PIN, or password. Do not click any links in messages. Do not call any number the caller or the message gave you. If he calls again, just hang up. Please check with me first before doing anything.\n\n1. Do not read the OTP to anyone. Not to the caller, not to anyone else.\n2. If he calls again, hang up. You do not need to be polite.\n3. If you already shared a code, call your bank right away. Use the number on the back of your card.\n4. If you did not share anything, you can still call that number on your card to check your card.\n5. Delete any message with the OTP after you have hung up.\n6. Call or message me so we can check together."
    },
    {
     "person": "Mom",
@@ -526,7 +526,7 @@ window.DEMO = {
     "urgency": "low",
     "scam_risk": "no_signs",
     "summary": "Mom's phone storage almost full again, recurring monthly",
-    "reply": "1. Open WhatsApp. Tap the three dots or Settings, then Storage and data, then Manage storage. Delete big videos and forwarded files you don't need.\n2. Open your Photos app. Delete blurry photos, copies, and old videos. Videos take the most space.\n3. Empty the 'Recently deleted' or 'Bin' folder in Photos. Otherwise the space is not freed.\n4. Delete apps you never use. Press and hold the app, then tap Uninstall or Remove App.\n5. Open Settings, then Storage, to see what is using the most space. Send me a screenshot of that screen.\n6. In WhatsApp, turn off automatic downloading of photos and videos. This stops it filling up again next month."
+    "reply": "1. Open WhatsApp. Tap the three dots or Settings, then Storage and data, then Manage storage. Delete big videos and forwarded files you don't need.\n2. Open your Photos app. Delete blurry photos, duplicates, and old screenshots. Then empty the 'Recently deleted' or 'Bin' folder.\n3. Open Settings, then Storage. Look at which apps take the most space.\n4. Delete apps you never use. Tap and hold the app icon, then tap Uninstall or Remove App.\n5. In WhatsApp Settings, tap Storage and data. Turn off auto-download for photos and videos so the phone doesn't fill up again.\n6. If it is still full, send me a screenshot of the Storage screen and I will help."
    },
    {
     "person": "Dad",
@@ -534,8 +534,8 @@ window.DEMO = {
     "category": "tv_and_streaming",
     "urgency": "low",
     "scam_risk": "no_signs",
-    "summary": "Dad wants to video call family on the new smart TV",
-    "reply": "1. Look at the label on the back of the TV or the box. Send me a photo of the brand and model name. 2. Check if the TV has a small camera on top. Most TVs do not, so you may need a plug-in camera. 3. Don't buy a camera or install anything yet. I will tell you which one works with your TV. 4. For now, call me on WhatsApp video from your phone as usual. 5. I will call you to set up the big screen together, step by step."
+    "summary": "Dad wants to video call family on new smart TV",
+    "reply": "1. Send me a photo of the TV's brand and model. It is on a sticker on the back of the TV. Most smart TVs need a separate camera for video calls, so this tells me what yours needs.\n2. The easiest way for now: start the video call on your phone as usual (for example on WhatsApp).\n3. On your phone, look for 'Screen Mirroring', 'Cast', or 'Smart View' in the quick settings. Pick your TV from the list.\n4. Your call now shows on the big screen. Prop the phone up facing you so the grandkids can see you.\n5. If the sound is quiet, turn up the volume on the TV remote.\n6. If we add a TV camera later, only install apps from the TV's own app store. Call me first and I will walk you through it."
    }
   ],
   "patterns": {

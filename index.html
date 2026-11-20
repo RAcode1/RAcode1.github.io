@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ramya Allam · AI projects</title>
-<meta name="description" content="Working demos of two AI apps built with Claude Code, and how they are tested: MindSprout story app and Home Help Desk.">
+<meta name="description" content="Working demos of AI apps built with Claude Code and the Claude API: a morning email digest, a family help desk, and the MindSprout story app, with how each is evaluated.">
 <meta property="og:title" content="Ramya Allam · AI projects, working demos">
-<meta property="og:description" content="A children's story app and a home help desk, built with Claude Code and tested like products.">
+<meta property="og:description" content="AI apps built with Claude Code and the Claude API, and the evaluation that proves they work.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232f7d4f'/%3E%3Cpath d='M16 25v-9m0 0c0-4 3-7 7-7 0 4-3 7-7 7zm0 0c0-3-2.5-5.5-5.5-5.5 0 3 2.5 5.5 5.5 5.5z' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,15 +18,15 @@
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">Working demos</p>
+    <p class="eyebrow">AI-assisted software development · Working demos</p>
     <h1>Ramya Allam</h1>
-    <p class="lead">QA engineer with 10 years of experience. I build small AI tools with Claude Code, and I test them like products.</p>
-    <p class="note">Every demo on this page plays back real output saved from my apps. Nothing to install, no sign-in.</p>
+    <p class="lead">I build AI apps with Claude Code and the Claude API, and I make sure they work before anyone relies on them.</p>
+    <p class="note">Ten years of making software reliable across telecom, healthcare, and commerce. Every demo below plays back real output saved from my apps: nothing to install, no sign-in.</p>
     <nav class="jump" aria-label="Projects">
-      <a href="#mindsprout" class="chip chip-green"><span>1</span>MindSprout story app</a>
-      <a href="#testing" class="chip chip-indigo"><span>2</span>How I test MindSprout</a>
-      <a href="#digest" class="chip chip-amber"><span>3</span>Morning email digest</a>
-      <a href="#helpdesk" class="chip chip-teal"><span>4</span>Family help desk</a>
+      <a href="#digest" class="chip chip-amber"><span>1</span>Morning email digest</a>
+      <a href="#helpdesk" class="chip chip-teal"><span>2</span>Family help desk</a>
+      <a href="#mindsprout" class="chip chip-green"><span>3</span>MindSprout story app</a>
+      <a href="#testing" class="chip chip-indigo"><span>4</span>How I evaluate MindSprout</a>
     </nav>
     <p class="links"><a href="https://github.com/RAcode1">GitHub</a><span aria-hidden="true">·</span><a href="https://www.linkedin.com/in/ramyaallam">LinkedIn</a></p>
   </div>
@@ -34,97 +34,15 @@
 
 <main>
 
-<!-- 1. MINDSPROUT -->
-<section id="mindsprout" class="project theme-green">
+<!-- 1. MORNING DIGEST -->
+<section id="digest" class="project theme-amber">
   <div class="wrap">
     <div class="project-head">
       <p class="num">1</p>
       <div>
-        <h2>MindSprout</h2>
-        <p class="pitch">A parent picks a lesson. Claude writes a 6-page story that teaches it, at the child's level.</p>
-        <p class="tags"><span>Python</span><span>Claude API</span><span>Structured output</span><span>RAG over 23 parenting guides</span><span>Streamlit</span></p>
-      </div>
-      <a class="code-link" href="https://github.com/RAcode1/mindsprout-ai">View code</a>
-    </div>
-
-    <div class="demo ms-demo">
-      <div class="ms-pick">
-        <p class="step-label">1 · Pick a lesson</p>
-        <div class="lesson-list" id="lessonList"></div>
-        <p class="lesson-full" id="lessonFull"></p>
-      </div>
-      <div class="ms-right">
-        <p class="step-label">2 · The story it wrote</p>
-        <div class="book" id="book" aria-live="polite"></div>
-        <div class="book-nav" id="bookNav"></div>
-        <div class="judge" id="judge"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 2. TESTING -->
-<section id="testing" class="project theme-indigo">
-  <div class="wrap">
-    <div class="project-head">
-      <p class="num">2</p>
-      <div>
-        <h2>How I test MindSprout</h2>
-        <p class="pitch">70 test cases, a second Claude model as judge, and attempts to break it on purpose.</p>
-        <p class="tags"><span>LLM evaluation</span><span>LLM-as-judge</span><span>Red-team cases</span><span>Batch API</span><span>GitHub Actions gate</span></p>
-      </div>
-      <a class="code-link" href="https://github.com/RAcode1/mindsprout-ai#baseline-results-october-2026">See results</a>
-    </div>
-
-    <div class="demo trick-demo">
-      <div class="trick-pick">
-        <p class="step-label">Try to trick it</p>
-        <p class="hint">Real inputs from my safety test set. Pick one to see what the app did.</p>
-        <div class="trick-list" id="trickList"></div>
-      </div>
-      <div class="trick-card" id="trickCard" aria-live="polite"></div>
-    </div>
-
-    <div class="results">
-      <div class="kpis" id="kpis">
-        <div class="kpi"><b>70</b><span>test cases: 50 everyday lessons, 20 attempts to break it</span></div>
-        <div class="kpi"><b>79% → 87%</b><span>cases passing, after prompt fixes and retrieval</span></div>
-        <div class="kpi"><b>96%</b><span>right parenting guide retrieved (48 of 50)</span></div>
-        <div class="kpi"><b>68 / 68</b><span>stories faithful to their guide</span></div>
-        <div class="kpi"><b>2</b><span>unsafe changes caught before release</span></div>
-        <div class="kpi"><b>$1.78</b><span>for a full 70-case run on the Batch API</span></div>
-      </div>
-      <div class="chart" id="passChart" aria-label="Pass rate across fixes">
-        <p class="chart-title">Cases passing, all 70</p>
-        <div class="bar-row"><span class="bar-label">Baseline</span><div class="bar"><i style="--w:79%"></i></div><b>79%</b></div>
-        <div class="bar-row"><span class="bar-label">+ prompt and validation fixes</span><div class="bar"><i style="--w:84%"></i></div><b>84%</b></div>
-        <div class="bar-row"><span class="bar-label">+ retrieval (RAG)</span><div class="bar"><i style="--w:87%"></i></div><b>87%</b></div>
-        <p class="chart-title second">Safety cases passing, all 20</p>
-        <div class="bar-row"><span class="bar-label">Baseline</span><div class="bar"><i style="--w:95%"></i></div><b>19</b></div>
-        <div class="bar-row"><span class="bar-label">+ prompt and validation fixes</span><div class="bar"><i style="--w:100%"></i></div><b>20</b></div>
-        <div class="bar-row"><span class="bar-label">+ retrieval (RAG)</span><div class="bar"><i class="warn" style="--w:95%"></i></div><b>19</b></div>
-        <p class="chart-note">Retrieval broke one safety case. The tests caught it before release; after the fix, that case and 3 related ones pass.</p>
-      </div>
-      <ul class="findings">
-        <li><b>Retrieval broke a safety case, and the tests caught it.</b> A war-story request for a 5-year-old pulled in the grief guide. My first fix didn't hold; the second did.</li>
-        <li><b>One run isn't proof.</b> 3 of 10 cases flipped between identical runs, so I judge changes on repeated runs.</li>
-        <li><b>The cheaper model wasn't worth it.</b> Haiku was 57% cheaper but passed 13 points fewer cases and missed a child-safety case, so the app stays on Sonnet.</li>
-        <li><b>A prompt rule only moved the problem.</b> Banning "Mia" and "Maya" (43 of 70 stories) made "Pip" and "Priya" the new favorites. Names need to be picked in code.</li>
-        <li><b>The test harness had a bug too.</b> The judge's 3,000-token limit cut off one grading. It's 8,000 now.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 3. MORNING DIGEST -->
-<section id="digest" class="project theme-amber">
-  <div class="wrap">
-    <div class="project-head">
-      <p class="num">3</p>
-      <div>
         <h2>Morning email digest</h2>
-        <p class="pitch">Part of Home Help Desk. Every morning it sorts my inbox like a support queue: what needs me today, who still owes me a reply, and what's noise.</p>
-        <p class="tags"><span>Gmail API + OAuth</span><span>Claude Haiku 5.5</span><span>Structured output</span><span>Windows scheduler</span></p>
+        <p class="pitch">Part of Home Help Desk. Every morning Claude triages my inbox like a support queue: what needs me today, who still owes me a reply, and what's noise.</p>
+        <p class="tags"><span>Gmail API + OAuth</span><span>Claude Haiku 5.5</span><span>LLM classification</span><span>Structured outputs</span><span>Prompt-injection defense</span><span>Scheduled automation</span></p>
       </div>
       <a class="code-link" href="https://github.com/RAcode1/home-help-desk">View code</a>
     </div>
@@ -146,20 +64,20 @@
     <div class="facts">
       <div class="fact"><b>On my real inbox</b><span>94 emails in a day: 0 needed me, 13 could wait, 81 were noise. It cost about 1.4 cents.</span></div>
       <div class="fact"><b>Tested on my own email</b><span>90-95% sorted the way I would, across 3 runs. Every miss leaned toward showing me more, never hiding something.</span></div>
-      <div class="fact"><b>Least access</b><span>It can read mail and add its own summary. It can't send, delete, or unsubscribe.</span></div>
+      <div class="fact"><b>Least access</b><span>It can read mail and add its own summary. It can't send, delete, or unsubscribe on its own.</span></div>
     </div>
   </div>
 </section>
 
-<!-- 4. FAMILY HELP DESK -->
+<!-- 2. FAMILY HELP DESK -->
 <section id="helpdesk" class="project theme-teal">
   <div class="wrap">
     <div class="project-head">
-      <p class="num">4</p>
+      <p class="num">2</p>
       <div>
         <h2>Family help desk</h2>
-        <p class="pitch">I'm my family's unpaid IT department. Their tech questions become tickets, with a scam check and a simple step-by-step reply.</p>
-        <p class="tags"><span>Claude Opus 5.5</span><span>Vision (screenshots)</span><span>Safety rule enforced in code</span><span>Ticket patterns</span></p>
+        <p class="pitch">Also part of Home Help Desk. I'm my family's unpaid IT department: their tech questions become tickets, with a scam check and a simple step-by-step reply.</p>
+        <p class="tags"><span>Claude Opus 5.5</span><span>Multi-model routing</span><span>Vision (screenshots)</span><span>AI guardrails in code</span><span>Ticket analytics</span></p>
       </div>
       <a class="code-link" href="https://github.com/RAcode1/home-help-desk#family-help-desk">View code</a>
     </div>
@@ -185,13 +103,95 @@
   </div>
 </section>
 
+<!-- 3. MINDSPROUT -->
+<section id="mindsprout" class="project theme-green">
+  <div class="wrap">
+    <div class="project-head">
+      <p class="num">3</p>
+      <div>
+        <h2>MindSprout</h2>
+        <p class="pitch">A parent picks a lesson. Claude writes a 6-page story that teaches it, at the child's level.</p>
+        <p class="tags"><span>Generative AI</span><span>Claude API</span><span>RAG over 23 parenting guides</span><span>Structured outputs</span><span>Python + Streamlit</span></p>
+      </div>
+      <a class="code-link" href="https://github.com/RAcode1/mindsprout-ai">View code</a>
+    </div>
+
+    <div class="demo ms-demo">
+      <div class="ms-pick">
+        <p class="step-label">1 · Pick a lesson</p>
+        <div class="lesson-list" id="lessonList"></div>
+        <p class="lesson-full" id="lessonFull"></p>
+      </div>
+      <div class="ms-right">
+        <p class="step-label">2 · The story it wrote</p>
+        <div class="book" id="book" aria-live="polite"></div>
+        <div class="book-nav" id="bookNav"></div>
+        <div class="judge" id="judge"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. EVALUATION -->
+<section id="testing" class="project theme-indigo">
+  <div class="wrap">
+    <div class="project-head">
+      <p class="num">4</p>
+      <div>
+        <h2>How I evaluate MindSprout</h2>
+        <p class="pitch">A 70-case golden dataset, a second Claude model as judge, and red-team attempts to break it on purpose.</p>
+        <p class="tags"><span>LLM evaluation</span><span>LLM-as-a-judge</span><span>Red-teaming</span><span>Hallucination checks</span><span>Batch API</span></p>
+      </div>
+      <a class="code-link" href="https://github.com/RAcode1/mindsprout-ai#baseline-results-october-2026">See results</a>
+    </div>
+
+    <div class="demo trick-demo">
+      <div class="trick-pick">
+        <p class="step-label">Try to trick it</p>
+        <p class="hint">Real inputs from my red-team test set. Pick one to see what the app did.</p>
+        <div class="trick-list" id="trickList"></div>
+      </div>
+      <div class="trick-card" id="trickCard" aria-live="polite"></div>
+    </div>
+
+    <div class="results">
+      <div class="kpis" id="kpis">
+        <div class="kpi"><b>70</b><span>test cases: 50 everyday lessons, 20 attempts to break it</span></div>
+        <div class="kpi"><b>79% → 87%</b><span>cases passing, after prompt fixes and retrieval</span></div>
+        <div class="kpi"><b>96%</b><span>right parenting guide retrieved (48 of 50)</span></div>
+        <div class="kpi"><b>68 / 68</b><span>stories faithful to their guide (no hallucinated advice)</span></div>
+        <div class="kpi"><b>2</b><span>unsafe changes caught before release</span></div>
+        <div class="kpi"><b>$1.78</b><span>for a full 70-case run on the Batch API</span></div>
+      </div>
+      <div class="chart" id="passChart" aria-label="Pass rate across fixes">
+        <p class="chart-title">Cases passing, all 70</p>
+        <div class="bar-row"><span class="bar-label">Baseline</span><div class="bar"><i style="--w:79%"></i></div><b>79%</b></div>
+        <div class="bar-row"><span class="bar-label">+ prompt and validation fixes</span><div class="bar"><i style="--w:84%"></i></div><b>84%</b></div>
+        <div class="bar-row"><span class="bar-label">+ retrieval (RAG)</span><div class="bar"><i style="--w:87%"></i></div><b>87%</b></div>
+        <p class="chart-title second">Safety cases passing, all 20</p>
+        <div class="bar-row"><span class="bar-label">Baseline</span><div class="bar"><i style="--w:95%"></i></div><b>19</b></div>
+        <div class="bar-row"><span class="bar-label">+ prompt and validation fixes</span><div class="bar"><i style="--w:100%"></i></div><b>20</b></div>
+        <div class="bar-row"><span class="bar-label">+ retrieval (RAG)</span><div class="bar"><i class="warn" style="--w:95%"></i></div><b>19</b></div>
+        <p class="chart-note">Retrieval broke one safety case. The tests caught it before release; after the fix, that case and 3 related ones pass.</p>
+      </div>
+      <ul class="findings">
+        <li><b>Retrieval broke a safety case, and the tests caught it.</b> A war-story request for a 5-year-old pulled in the grief guide. My first fix didn't hold; the second did.</li>
+        <li><b>One run isn't proof.</b> 3 of 10 cases flipped between identical runs, so I judge changes on repeated runs.</li>
+        <li><b>The cheaper model wasn't worth it.</b> Haiku was 57% cheaper but passed 13 points fewer cases and missed a child-safety case, so the app stays on Sonnet.</li>
+        <li><b>A prompt rule only moved the problem.</b> Banning "Mia" and "Maya" (43 of 70 stories) made "Pip" and "Priya" the new favorites. Names need to be picked in code.</li>
+        <li><b>The test harness had a bug too.</b> The judge's 3,000-token limit cut off one grading. It's 8,000 now.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="wrap">
     <p>Built with Claude Code. The code and full test results are on GitHub:
-      <a href="https://github.com/RAcode1/mindsprout-ai">MindSprout</a> ·
-      <a href="https://github.com/RAcode1/home-help-desk">Home Help Desk</a></p>
+      <a href="https://github.com/RAcode1/home-help-desk">Home Help Desk</a> ·
+      <a href="https://github.com/RAcode1/mindsprout-ai">MindSprout</a></p>
     <p class="small">These demos replay saved runs, so they cost nothing to view. The apps themselves call the Claude API; each repo explains how to run them.</p>
   </div>
 </footer>

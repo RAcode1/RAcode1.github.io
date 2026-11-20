@@ -196,6 +196,14 @@ h2 { margin: 0; font: 600 clamp(28px, 4vw, 36px)/1.15 var(--serif); letter-spaci
 .waiting .draft { margin: 8px 0 0; padding-left: 10px; border-left: 3px solid var(--accent); color: var(--muted); font-style: italic; min-height: 1.5em; }
 .noise-row { display: flex; align-items: baseline; gap: 8px; margin: 5px 0; font-size: 15px; }
 .noise-row .count { min-width: 2ch; font: 600 22px var(--serif); color: var(--accent); text-align: right; }
+.noise-row .nr-text { flex: 1; }
+.unsub { flex: none; align-self: center; padding: 3px 11px; border: 1px solid var(--accent); border-radius: 999px; background: transparent; color: var(--accent); font-size: 12.5px; font-weight: 600; cursor: pointer; transition: background .15s, color .15s; }
+.unsub:hover:not(:disabled) { background: var(--accent); color: var(--surface); }
+.noise-row.done .count, .noise-row.done .nr-text { opacity: .45; text-decoration: line-through; }
+.noise-row.done .unsub { border-color: transparent; color: var(--green); cursor: default; }
+.unsub-total { margin: 12px 0 4px; font-size: 15px; }
+.unsub-total b { color: var(--accent); }
+.unsub-note { margin: 0; color: var(--muted); font-size: 12.5px; }
 .cost-line { color: var(--muted); font-size: 13px; }
 .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
 .fact { padding: 14px 16px; border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); font-size: 14px; }

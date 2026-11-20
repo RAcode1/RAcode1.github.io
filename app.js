@@ -185,10 +185,30 @@
     }
     add(`<div class="dg-block"><h4>Can wait: ${count("can_wait")} · Noise: ${count("noise")}</h4></div>`);
     await sleep(400); if (run !== digestRun) return;
+    const total = dg.noise.reduce((n, row) => n + row.count, 0);
     add(`<div class="dg-block"><h4>Noise report</h4>${dg.noise.map((n, i) =>
-      `<div class="noise-row"><span class="count" data-to="${n.count}" id="nc${i}">0</span><span>emails from <b>${esc(n.sender)}</b> this month. You opened ${n.opened === 0 ? "none" : n.opened}.</span></div>`).join("")}</div>`);
+      `<div class="noise-row" id="nr${i}"><span class="count" id="nc${i}">0</span><span class="nr-text">emails from <b>${esc(n.sender)}</b> this month. You opened ${n.opened === 0 ? "none" : n.opened}.</span><button type="button" class="unsub" data-i="${i}">Unsubscribe</button></div>`).join("")}
+      <p class="unsub-total" id="unsubTotal">Unsubscribe from all ${dg.noise.length} and you'd get <b>${total} fewer emails a month</b>.</p>
+      <p class="unsub-note">Try a button. In the real digest, each one opens that sender's own unsubscribe page (from the email's unsubscribe header). Nothing is unsubscribed automatically.</p></div>`);
+    saved = 0;
     await Promise.all(dg.noise.map((n, i) => countUp($(`#nc${i}`), n.count)));
   }
+
+  /* Unsubscribe buttons: show what acting on the noise report saves. */
+  let saved = 0;
+  $("#digestCard").addEventListener("click", (event) => {
+    const btn = event.target.closest(".unsub");
+    if (!btn || btn.disabled) return;
+    const i = Number(btn.dataset.i), row = dg.noise[i];
+    $(`#nr${i}`).classList.add("done");
+    btn.textContent = "Unsubscribed ✓";
+    btn.disabled = true;
+    saved += row.count;
+    const total = dg.noise.reduce((n, r) => n + r.count, 0);
+    $("#unsubTotal").innerHTML = saved === total
+      ? `Done: <b>${total} fewer emails a month</b>.`
+      : `So far: <b>${saved} fewer emails a month</b> (${total} if you unsubscribe from all ${dg.noise.length}).`;
+  });
 
   async function typeInto(el, text, run, live) {
     if (reduce) { el.textContent = text; return; }
